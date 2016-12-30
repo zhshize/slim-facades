@@ -26,7 +26,7 @@ Using composer:<br>
 Usage
 -----
 After the installation, you can update your code like this:
-```php
+````php
     //... Something not important ...
     use SlimFacades\Facade;
     use SlimFacades\Route;
@@ -42,4 +42,11 @@ After the installation, you can update your code like this:
     });
     
     App::run();
-```
+````
+Default Facades
+---------------
+The following facades are provided by Slim-Facades:
+###App
+````php
+    App::run();
+````
