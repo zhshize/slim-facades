@@ -9,14 +9,14 @@ namespace SlimFacades;
 
 /**
  * Class View
- * If you want to use this facades, you should set a 'view' service in the
+ * If you want to use this facades, you should set a 'logger' service in the
  * container.
  * @package SlimFacades
  */
-class View extends Facade
+class Log extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'view';
+        return 'logger';
     }
 }
