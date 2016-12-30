@@ -27,9 +27,6 @@ Usage
 -----
 After the installation, you can update your code like this:
 ```php
-    <?php
-    require '../vendor/autoload.php';
-    
     //... Something not important ...
     use SlimFacades\Facade;
     use SlimFacades\Route;
