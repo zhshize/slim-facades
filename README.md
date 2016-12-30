@@ -29,6 +29,7 @@ Using [composer](https://getcomposer.org/):<br>
 Usage
 -----
 After the installation, you can update your code like this:
+
 ```php
     //... Something not important ...
     use SlimFacades\Facade;
@@ -52,32 +53,44 @@ Default Facades
 The following facades are provided by Slim-Facades:
 ###App
 Use it just like using $app!
+
 ```php
     App::run();
 ```
+
 ###Container
 Use it just like using $container!
+
 ```php
     Container::hasService('view');
 ```
+
 ###Route
+
 ```php
     Route::get('/', function (Request $req, Response $res) {
         $res->getBody()->write("Hello");
         return $res;
     });
 ```
+
 ###Request
+
 ```php
     $method = Request::getMethod();
 ```
+
 ###Response
+
 ```php
     Response::withStatus(302);
 ```
+
 ###Setting
 There are some special method is the following:
+
 ####get($key = null)
+
 ```php
     /**
      * Get the settings value.
@@ -94,13 +107,17 @@ There are some special method is the following:
         }
     }
 ```
+
 #####Usage
+
 ```php
     Settings::get()['db'];
     Settings::get('db');
     //The same result.
 ```
+
 ####set($key, $value)
+
 ```php
     /**
      * Set the settings value.
@@ -124,12 +141,15 @@ There are some special method is the following:
         }
     }
 ```
+
 #####Usage
+
 ```php
     $container['settings']['db']['host'] = 'localhost';
     Settings::set(['db', 'host'], 'localhost') = 'localhost';
     //The same result.
 ```
+
 ###View and Log
 If you want to use them, you should set 'view' and 'logger' services in the
 container or change the value which returned by ``getFacadeAccessor()``.
@@ -138,6 +158,7 @@ Custom Facades
 --------------
 The code for creating a custom facades for a service in the container is the 
 following:
+
 ```php
 using SlimFacades\Facade;
 class CustomFacade extends Facade
@@ -149,7 +170,9 @@ class CustomFacade extends Facade
     }
 }
 ```
+
 The code for creating a custom facades for an instance is the following:
+
 ```php
 using SlimFacades\Facade;
 class CustomFacade extends Facade
