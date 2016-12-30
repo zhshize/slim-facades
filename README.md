@@ -1,9 +1,7 @@
+#Slim Facades
 
-Slim Facades
-============
+##Introdution
 
-Introdution
------------
 SlimFacades is a package to provide facades for 
 [Slim PHP framework](https://www.slimframework.com).  
 
@@ -16,18 +14,18 @@ container, providing the benefit of a terse, expressive syntax while maintaining
 more testability and flexibility than traditional static methods, so does 
 Slim-Facades.
 
-Requirement
------------
+##Requirement
+
 + PHP >= 5.5.0
 + Slim >= 3.0
 
-Installation
-------------
+##Installation
+
 Using [composer](https://getcomposer.org/):<br>
 `composer require zhangshize/slim-facades`
 
-Usage
------
+##Usage
+
 After the installation, you can update your code like this:
 
 ```php
@@ -48,10 +46,12 @@ After the installation, you can update your code like this:
     App::run();
 ```
 
-Default Facades
----------------
+##Default Facades
+
 The following facades are provided by Slim-Facades:
+
 ###App
+
 Use it just like using $app!
 
 ```php
@@ -59,6 +59,7 @@ Use it just like using $app!
 ```
 
 ###Container
+
 Use it just like using $container!
 
 ```php
@@ -87,6 +88,7 @@ Use it just like using $container!
 ```
 
 ###Setting
+
 There are some special method is the following:
 
 ####get($key = null)
@@ -151,11 +153,12 @@ There are some special method is the following:
 ```
 
 ###View and Log
+
 If you want to use them, you should set 'view' and 'logger' services in the
 container or change the value which returned by ``getFacadeAccessor()``.
 
-Custom Facades
---------------
+##Custom Facades
+
 The code for creating a custom facades for a service in the container is the 
 following:
 
@@ -185,8 +188,8 @@ class CustomFacade extends Facade
 }
 ```
 
-Licence
--------
+##Licence
+
 [Apache License Version 2.0.](LICENSE)
 
 Copyright [2016] [zhangshize]
