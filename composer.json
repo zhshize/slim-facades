@@ -2,8 +2,11 @@
     "name": "zhangshize/slim-facades",
     "description": "Facades for Slim 3.",
     "type": "library",
+    "keywords": ["slim","facades"],
+    "homepage": "https://github.com/zhangshize/slim-facades",
     "require": {
-        "slim/slim": "3.6"
+        "php": ">=5.5.0",
+        "slim/slim": ">=3.0"
     },
     "license": "Apache License Version 2.0",
     "authors": [
