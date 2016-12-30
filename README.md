@@ -1,6 +1,6 @@
 #Slim Facades
 
-##Introdution
+##Introduction
 
 SlimFacades is a package to provide facades for 
 [Slim PHP framework](https://www.slimframework.com).  
