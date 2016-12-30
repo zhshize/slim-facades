@@ -2,6 +2,7 @@
     "name": "zhangshize/slim-facades",
     "description": "Facades for Slim 3.",
     "type": "library",
+    "version": "1.0.0",
     "keywords": ["slim","facades"],
     "homepage": "https://github.com/zhangshize/slim-facades",
     "require": {
