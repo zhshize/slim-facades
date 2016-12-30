@@ -23,6 +23,12 @@ class App extends Facade
         return self::$app;
     }
 
+    /**
+     * Get the settings value.
+     * If $key = null, this function returns settings.
+     * @param string|null $key
+     * @return mixed
+     */
     public static function get($key = null)
     {
         if ($key === null) {
@@ -32,6 +38,15 @@ class App extends Facade
         }
     }
 
+    /**
+     * Set the settings value.
+     * When $key is an array, it will be viewed to a list of keys.  <br>
+     * For Example:
+     * $key = ['a','b']; <br>
+     * The function will set the value of $container->settions['a']['b'].
+     * @param array|string $key
+     * @param mixed $value
+     */
     public static function set($key, $value)
     {
         if (is_array($key)) {
