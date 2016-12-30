@@ -11,7 +11,7 @@ namespace SlimFacades;
  * The facades for Slim\App instance.
  * @package SlimFacades
  */
-class App extends Facade
+class Settings extends Facade
 {
     /**
      * Overriding Facades::self() to set Slim\App instance is in order to tell
