@@ -29,7 +29,7 @@ Using [composer](https://getcomposer.org/):<br>
 Usage
 -----
 After the installation, you can update your code like this:
-````php
+```php
     //... Something not important ...
     use SlimFacades\Facade;
     use SlimFacades\Route;
@@ -45,39 +45,40 @@ After the installation, you can update your code like this:
     });
     
     App::run();
-````
+```
+
 Default Facades
 ---------------
 The following facades are provided by Slim-Facades:
 ###App
 Use it just like using $app!
-````php
+```php
     App::run();
-````
+```
 ###Container
 Use it just like using $container!
-````php
+```php
     Container::hasService('view');
-````
+```
 ###Route
-````php
+```php
     Route::get('/', function (Request $req, Response $res) {
         $res->getBody()->write("Hello");
         return $res;
     });
-````
+```
 ###Request
-````php
+```php
     $method = Request::getMethod();
-````
+```
 ###Response
-````php
+```php
     Response::withStatus(302);
-````
+```
 ###Setting
 There are some special method is the following:
 ####get($key = null)
-````php
+```php
     /**
      * Get the settings value.
      * If $key = null, this function returns settings.
@@ -92,15 +93,15 @@ There are some special method is the following:
             return self::self()->getContainer()['settings'][$key];
         }
     }
-````
+```
 #####Usage
-````php
+```php
     Settings::get()['db'];
     Settings::get('db');
     //The same result.
-````
+```
 ####set($key, $value)
-````php
+```php
     /**
      * Set the settings value.
      * When $key is an array, it will be viewed to a list of keys.  <br>
@@ -122,13 +123,13 @@ There are some special method is the following:
             self::self()->getContainer()['settings'][$key] = $value;
         }
     }
-````
+```
 #####Usage
-````php
+```php
     $container['settings']['db']['host'] = 'localhost';
     Settings::set(['db', 'host'], 'localhost') = 'localhost';
     //The same result.
-````
+```
 ###View and Log
 If you want to use them, you should set 'view' and 'logger' services in the
 container or change the value which returned by ``getFacadeAccessor()``.
@@ -137,7 +138,7 @@ Custom Facades
 --------------
 The code for creating a custom facades for a service in the container is the 
 following:
-````php
+```php
 using SlimFacades\Facade;
 class CustomFacade extends Facade
 {
@@ -147,9 +148,9 @@ class CustomFacade extends Facade
         return 'serviceName';
     }
 }
-````
+```
 The code for creating a custom facades for an instance is the following:
-````php
+```php
 using SlimFacades\Facade;
 class CustomFacade extends Facade
 {
@@ -159,7 +160,7 @@ class CustomFacade extends Facade
         return self::$app->getContainer()->get('myservice');
     }
 }
-````
+```
 
 Licence
 -------
