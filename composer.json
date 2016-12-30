@@ -1,0 +1,21 @@
+{
+    "name": "zhangshize/slim-facades",
+    "description": "Facades for Slim 3.",
+    "type": "library",
+    "require": {
+        "slim/slim": "3.6"
+    },
+    "license": "Apache License Version 2.0",
+    "authors": [
+        {
+            "name": "Shi Ze Zhang",
+            "email": "shizezhang@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "SlimFacades\\": "src"
+        }
+    }
+}
