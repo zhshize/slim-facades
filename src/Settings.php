@@ -56,7 +56,8 @@ class Settings extends Facade
             }
             $now = $value;
         } else {
-            self::self()->getContainer()['settings'][$key] = $value;
+            $settings = self::self()->getContainer()['settings'];
+            $settings[$key] = $value;
         }
     }
 }
