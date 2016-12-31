@@ -102,11 +102,7 @@ There are some special method is the following:
      */
     public static function get($key = null)
     {
-        if ($key === null) {
-            return self::self()->getContainer()['settings'];
-        } else {
-            return self::self()->getContainer()['settings'][$key];
-        }
+        // ...
     }
 ```
 
@@ -132,15 +128,7 @@ There are some special method is the following:
      */
     public static function set($key, $value)
     {
-        if (is_array($key)) {
-            $now = self::self()->getContainer()['settings'];
-            foreach ($key as $item) {
-                $now = $now[$item];
-            }
-            $now = $value;
-        } else {
-            self::self()->getContainer()['settings'][$key] = $value;
-        }
+        // ...
     }
 ```
 
@@ -148,7 +136,7 @@ There are some special method is the following:
 
 ```php
     $container['settings']['db']['host'] = 'localhost';
-    Settings::set(['db', 'host'], 'localhost') = 'localhost';
+    Settings::set(['db', 'host'], 'localhost');
     //The same result.
 ```
 
