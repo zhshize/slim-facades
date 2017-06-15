@@ -1,6 +1,6 @@
-#Slim Facades
+# Slim Facades
 
-##Introduction
+## Introduction
 
 SlimFacades is a package to provide facades for 
 [Slim PHP framework](https://www.slimframework.com).  
@@ -14,17 +14,17 @@ container, providing the benefit of a terse, expressive syntax while maintaining
 more testability and flexibility than traditional static methods, so does 
 Slim-Facades.
 
-##Requirement
+## Requirement
 
 + PHP >= 5.5.0
 + Slim >= 3.0
 
-##Installation
+## Installation
 
 Using [composer](https://getcomposer.org/):<br>
 `composer require zhangshize/slim-facades`
 
-##Usage
+## Usage
 
 After the installation, you can update your code like this:
 
@@ -46,11 +46,11 @@ After the installation, you can update your code like this:
     App::run();
 ```
 
-##Default Facades
+## Default Facades
 
 The following facades are provided by Slim-Facades:
 
-###App
+### App
 
 Use it just like using $app!
 
@@ -58,7 +58,7 @@ Use it just like using $app!
     App::run();
 ```
 
-###Container
+### Container
 
 Use it just like using $container!
 
@@ -66,7 +66,7 @@ Use it just like using $container!
     Container::hasService('view');
 ```
 
-###Route
+### Route
 
 ```php
     Route::get('/', function (Request $req, Response $res) {
@@ -75,23 +75,23 @@ Use it just like using $container!
     });
 ```
 
-###Request
+### Request
 
 ```php
     $method = Request::getMethod();
 ```
 
-###Response
+### Response
 
 ```php
     Response::withStatus(302);
 ```
 
-###Setting
+### Setting
 
 There are some special method is the following:
 
-####get($key = null)
+#### get($key = null)
 
 ```php
     /**
@@ -106,7 +106,7 @@ There are some special method is the following:
     }
 ```
 
-#####Usage
+##### Usage
 
 ```php
     Settings::get()['db'];
@@ -114,7 +114,7 @@ There are some special method is the following:
     //The same result.
 ```
 
-####set($key, $value)
+#### set($key, $value)
 
 ```php
     /**
@@ -132,7 +132,7 @@ There are some special method is the following:
     }
 ```
 
-#####Usage
+##### Usage
 
 ```php
     $container['settings']['db']['host'] = 'localhost';
@@ -140,12 +140,12 @@ There are some special method is the following:
     //The same result.
 ```
 
-###View and Log
+### View and Log
 
 If you want to use them, you should set 'view' and 'logger' services in the
 container or change the value which returned by ``getFacadeAccessor()``.
 
-##Custom Facades
+## Custom Facades
 
 The code for creating a custom facades for a service in the container is the 
 following:
@@ -176,7 +176,7 @@ class CustomFacade extends Facade
 }
 ```
 
-##Licence
+## Licence
 
 [Apache License Version 2.0.](LICENSE)
 
