@@ -49,6 +49,6 @@ class Facade
      */
     public static function self()
     {
-        return Facade::$app->getContainer()[static::getFacadeAccessor()];
+        return Facade::$app->getContainer()->get(static::getFacadeAccessor());
     }
 }
